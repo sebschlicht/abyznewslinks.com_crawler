@@ -1,0 +1,12 @@
+# BEGIN ANSIBLE MANAGED BLOCK: Files generated using vauly
+/docker/mongo-credentials.env
+# END ANSIBLE MANAGED BLOCK: Files generated using vauly
+/.vault_password
+
+/venv/
+/log/
+/.scrapy/httpcache/
+
+*.pyc
+__pycache__/
+__init__.py

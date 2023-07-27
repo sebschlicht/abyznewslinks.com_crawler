@@ -1,0 +1,40 @@
+version: 1
+root:
+  level: DEBUG
+  handlers:
+    - console
+
+loggers:
+  links:
+    propagate: no
+    handlers:
+      - file_links
+  crawled:
+    propagate: no
+    handlers:
+      - file_crawled
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+    level: INFO
+    stream: ext://sys.stdout
+  file_links:
+    class: logging.FileHandler
+    filename: log/abyz_links.log
+    mode: w
+    formatter: plain
+  file_crawled:
+    class: logging.FileHandler
+    filename: log/abyz_crawled.log
+    mode: w
+    formatter: plain
+
+formatters:
+  extended:
+    format: '%(asctime)-20s :: %(levelname)-8s :: [%(process)d]%(processName)s :: %(threadName)s[%(thread)d] :: %(pathname)s :: %(lineno)d :: %(message)s'
+  simple:
+    format: "%(asctime)s :: %(name)s :: %(message)s"
+  plain:
+    format: "%(message)s"

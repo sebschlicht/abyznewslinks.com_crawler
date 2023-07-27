@@ -1,0 +1,2 @@
+files:
+  - docker/mongo-credentials.env
