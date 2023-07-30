@@ -16,9 +16,11 @@ First, provide the following environment variables, specifying the URI and the d
 * MONGO_URI
 * MONGO_DB
 
+(e.g. via `export`)
+
 Run the following command to crawl news agencies and store them inside the local database:
 
-    scrapy crawl news-agencies
+    scrapy crawl abyz-news-agencies
 
 ## Run MongoDB
 
